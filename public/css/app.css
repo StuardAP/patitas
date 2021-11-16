@@ -1,0 +1,16 @@
+body{
+  background-image:url(../assets/images/background-04.jpg);
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+footer {
+        text-align:left;
+        font-family: sans-serif;
+        font-size: 35px;
+        color: whitesmoke;
+        width: 100%;
+        bottom: 0;
+        position:fixed;
+    }
