@@ -288,7 +288,7 @@ return [
                 ],
                 [
                     'text' => 'Asuntos',
-                    'url'  => '#',
+                    'route'  => 'asuntos.index',
                     'icon'=>'fas fa-concierge-bell',
                 ],
                  [
