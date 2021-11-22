@@ -14,7 +14,13 @@ class CreateProductosTable extends Migration
     public function up()
     {
         Schema::create('productos', function (Blueprint $table) {
+           $table->engine = 'InnoDB';
+            $table->charset = 'utf8mb4';
+            $table->collation = 'utf8mb4_unicode_ci';
             $table->id();
+            $table->string('producto_nombre');
+            $table->float('producto_costo',8,2);
+            $table->integer('producto_cantidad');
             $table->timestamps();
         });
     }
