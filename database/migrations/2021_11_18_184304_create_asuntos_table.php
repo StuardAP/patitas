@@ -14,8 +14,13 @@ class CreateAsuntosTable extends Migration
     public function up()
     {
         Schema::create('asuntos', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
+            $table->charset = 'utf8mb4';
+            $table->collation = 'utf8mb4_unicode_ci';
             $table->id();
             $table->string('asunto_nombre');
+            $table->integer('asunto_tiempo');
+            $table->float('asunto_costo',8,2);
             $table->timestamps();
         });
     }
