@@ -6,6 +6,8 @@ use Illuminate\Database\Seeder;
 use App\Models\Producto;
 use App\Models\Asuntos;
 use App\Models\Cliente;
+use App\Models\Empleado;
+use App\Models\Doctor;
 
 class DatabaseSeeder extends Seeder
 {
@@ -47,6 +49,13 @@ class DatabaseSeeder extends Seeder
             ['cliente_direccion'=>'Jr. Huánuco'],
             ['cliente_direccion'=>'Jr. Mayro'],
             ['cliente_direccion'=>'Jr. Junin'],
+            )->create();
+            Empleado::factory(4)->create();
+            Doctor::factory(4)->sequence(
+            ['doctor_especialidad'=>'Fisioterapia'],
+            ['doctor_especialidad'=>'Oncología'],
+            ['doctor_especialidad'=>'Cirugía'],
+            ['doctor_especialidad'=>'Rehabilitación'],
             )->create();
     }
 }
