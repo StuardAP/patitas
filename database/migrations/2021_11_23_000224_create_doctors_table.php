@@ -14,8 +14,18 @@ class CreateDoctorsTable extends Migration
     public function up()
     {
         Schema::create('doctors', function (Blueprint $table) {
-            $table->id();
+            $table->engine = 'InnoDB';
+            $table->charset = 'utf8mb4';
+            $table->collation = 'utf8mb4_unicode_ci';
+            $table->unsignedBigInteger('empleado_id');
+            $table->string('doctor_especialidad');
+             $table->foreign('empleado_id')
+            ->references('id')
+            ->on('empleados')
+            ->onDelete('cascade')
+            ->onUpdate('cascade');
             $table->timestamps();
+
         });
     }
 

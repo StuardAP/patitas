@@ -18,13 +18,10 @@ class CreateEmpleadosTable extends Migration
             $table->charset = 'utf8mb4';
             $table->collation = 'utf8mb4_unicode_ci';
             $table->id();
+            $table->string('empleado_dni',8);
             $table->string('empleado_nombre');
             $table->string('empleado_apellido');
-            $table->string('empleado_dni',8);
-            $table->string('empleado_direccion',20);
             $table->string('empleado_telefono',9);
-            $table->string('empleado_email');
-            $table->string('empleado_cargo');
             $table->timestamps();
         });
     }
